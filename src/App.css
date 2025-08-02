@@ -1,0 +1,254 @@
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-form {
+  width: 400px;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 50;
+}
+.login-heading {
+  text-align: center;
+}
+.login-heading h1 {
+  font-size: 32px;
+  margin: 0px;
+}
+.login-heading p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: #737373;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 30px 0 30px;
+}
+
+.custom-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0px 10px;
+  width: 100%;
+
+  border: 1px solid #f5f5f5;
+  border-radius: 6px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  box-sizing: border-box;
+  padding: 16px 10px;
+}
+.submit-btn {
+  padding: 16px 16px;
+  background: #0e77d3;
+  color: #fff;
+  font-size: medium;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+
+.custom-input:focus {
+  outline: none;
+}
+
+/* When any input inside .custom-input is focused, the .custom-input container gets a blue border.
+It’s useful for highlighting the whole input area when a user clicks inside it. */
+.custom-input:focus-within {
+  border: 1.5px solid #2d79f3;
+}
+.outer {
+  position: absolute;
+  border: 2px dashed #d4e9f9;
+  width: min(100vw, 100vh);
+  height: min(100vw, 100vh);
+  max-width: 1200px;
+  max-height: 1200px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 300px;
+}
+
+.outer-circle {
+  position: absolute;
+  border: 2px dashed #d4e9f9;
+  width: min(100vw, 100vh);
+  height: min(100vw, 100vh);
+  max-width: 1200px;
+  max-height: 1200px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px;
+  /* overflow: hidden; */
+  overflow: visible;
+}
+
+.inner-circle {
+  position: absolute;
+  border: 2px dashed #d4e9f9;
+  width: min(100vw, 100vh);
+  height: min(100vw, 100vh);
+  max-width: 700px;
+  max-height: 700px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 10px;
+}
+.dot,
+.dot-two,
+.dot-three,
+.dot-four,
+.dot-fifth {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  z-index: 30;
+}
+
+.dot {
+  background-color: #eee276;
+  top: 80%;
+  left: 9.7%;
+}
+.dot-two {
+  background-color: #c6dbea;
+  top: 20%;
+  left: 9%;
+}
+.dot-three {
+  background-color: #e5cce5;
+  top: 60%;
+  left: 0.6%;
+}
+.dot-four {
+  background-color: #c6dbea;
+  top: 50%;
+  left: 99.7%;
+}
+.dot-fifth {
+  background-color: #c6dbea;
+  top: 20%;
+  left: 90%;
+}
+.form-container {
+  /* border: 1px solid red; */
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  /* padding: 50px 0; */
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+}
+.footer-section {
+  text-align: center;
+  color: #737373;
+  font-size: 14px;
+  z-index: 50;
+}
+
+/* table */
+.Table-container {
+  padding: 30px;
+}
+.Tabbar-container {
+  display: flex;
+  border: 1px solid green;
+  border-radius: 8px;
+}
+.Tabbar-container button {
+  padding: 12px;
+  /* width: 100px; */
+  border-radius: 6px;
+}
+.active-tab {
+  font-size: 16px;
+  background-color: #0e77d3;
+  border: none;
+  color: white;
+}
+
+.container {
+  /* border-collapse: collapse; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  width: 100%;
+  /* border: 1px solid blue; */
+  margin-top: 10px;
+  padding: 30px 20px;
+  border-radius: 15px;
+}
+
+.Table {
+  border-collapse: collapse;
+  width: 100%;
+  /* border: 1px solid blue; */
+  margin-top: 10px;
+  padding: 30px 20px;
+  border-radius: 15px;
+}
+.Table th,
+.Table td {
+  text-align: start;
+  padding: 16px 16px;
+  font-size: 14px;
+  position: relative;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.Table th {
+  color: #4a4848;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 16px 16px;
+  border-bottom: 1px solid #d5d7d9;
+}

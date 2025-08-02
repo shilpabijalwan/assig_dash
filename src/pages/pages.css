@@ -1,0 +1,173 @@
+/* Profile Page Styles */
+.profile-container,
+.settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-header,
+.settings-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profile-header h1,
+.settings-header h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile-header p,
+.settings-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.profile-content,
+.settings-content {
+  display: grid;
+  gap: 20px;
+}
+
+.profile-card,
+.settings-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h3,
+.settings-card h3 {
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.profile-info {
+  display: grid;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item label {
+  font-weight: 600;
+  color: #555;
+}
+
+.info-item span {
+  color: #333;
+}
+
+.settings-list {
+  display: grid;
+  gap: 10px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-item label {
+  font-weight: 500;
+  color: #555;
+}
+
+.setting-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.setting-btn:hover {
+  background: #0056b3;
+}
+
+.danger-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.danger-btn:hover {
+  background: #c82333;
+}
+
+/* Form Controls */
+.setting-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.setting-item select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+.setting-item select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* dashboard */
+.dashboard-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-container h1 {
+  font-size: 42px;
+  font-weight: bold;
+  height: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container,
+  .settings-container {
+    padding: 0 10px;
+  }
+
+  .info-item,
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
