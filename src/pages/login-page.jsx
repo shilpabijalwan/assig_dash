@@ -22,7 +22,7 @@ function LoginPage() {
         setLoading(false);
         // Navigate to dashboard after successful login
         navigate("/dashboard");
-      }, 5000);
+      }, 2000);
 
       // Navigate to dashboard or show success  todo
     } catch (error) {

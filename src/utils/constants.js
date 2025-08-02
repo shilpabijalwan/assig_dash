@@ -1,3 +1,6 @@
+import CallRecordTable from "../components/CallRecordTable";
+import PastCallRecord from "../components/PastCallRecord";
+
 export const TABLE_DATA = [
   {
     name: "Chitra Nayak",
@@ -312,5 +315,3 @@ export const TABLE_DATA = [
     actions: ["calendar", "cancel"],
   },
 ];
-
-export const TAB = [{ title: "Upcomming" }, { title: "Past" }];

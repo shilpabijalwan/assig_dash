@@ -203,35 +203,41 @@ It’s useful for highlighting the whole input area when a user clicks inside it
 }
 .Tabbar-container {
   display: flex;
-  border: 1px solid green;
-  border-radius: 8px;
-}
-.Tabbar-container button {
-  padding: 12px;
-  /* width: 100px; */
+  justify-content: end;
+  width: 200px;
+  border: 2px solid #e4e7ea;
   border-radius: 6px;
+  /* padding: 3px; */
 }
+.Tabbar-container div {
+  padding: 12px;
+  text-align: center;
+  width: 50%;
+}
+
 .active-tab {
-  font-size: 16px;
   background-color: #0e77d3;
   border: none;
+  outline: none;
   color: white;
+  border-radius: 5px;
+  border: 2px solid #0e77d3;
+}
+.notActive {
+  outline: none;
 }
 
 .container {
-  /* border-collapse: collapse; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  width: 100%;
-  /* border: 1px solid blue; */
   margin-top: 10px;
   padding: 30px 20px;
   border-radius: 15px;
+  /* overflow-y: scroll; */
 }
 
 .Table {
   border-collapse: collapse;
   width: 100%;
-  /* border: 1px solid blue; */
   margin-top: 10px;
   padding: 30px 20px;
   border-radius: 15px;
@@ -251,4 +257,59 @@ It’s useful for highlighting the whole input area when a user clicks inside it
   font-size: 16px;
   padding: 16px 16px;
   border-bottom: 1px solid #d5d7d9;
+}
+
+/* pagination */
+.paginationTab {
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+  padding: 10px;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  gap: 8px;
+  font-family: sans-serif;
+}
+
+.page {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+}
+
+.page:hover {
+  background-color: #f0f0f0;
+}
+
+.page.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.dots {
+  padding: 6px 10px;
+  color: #999;
+}
+
+.btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+btn:disabled {
+  opacity: 0.4;
+  cursor: default;
 }

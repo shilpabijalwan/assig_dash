@@ -1,21 +1,23 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-
 import "./Layout.css";
 import SideBar from "./SideBar";
 import HorizontalBar from "./HorizontalBar";
 
-//Dashboard Layout with existing SideBar
 function DashboardLayout() {
   return (
     <div className="dashboard-layout">
-      <div className="dashboard-body">
+      <div className="dashboard-sidebar">
         <SideBar />
-        <div className="main-content">
+      </div>
+
+      <div className="dashboard-main">
+        <div className="dashboard-topbar">
           <HorizontalBar />
-          <div className="dashboard-content">
-            <Outlet />
-          </div>
+        </div>
+
+        <div className="dashboard-content">
+          <Outlet />
         </div>
       </div>
     </div>

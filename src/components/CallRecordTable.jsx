@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import useTableData from "../Hooks/useTableData";
-import { TAB, TABLE_DATA } from "../utils/constants";
+import { TABLE_DATA } from "../utils/constants";
 import SearchInput from "./SearchInput";
+import Pagination from "./Pagination";
 
 function CallRecordTable() {
   const [perPage, setPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+
   const { data, meta } = useTableData(TABLE_DATA, currentPage, perPage);
-  //   console.log(data, meta);
+  const { totalPages } = meta;
+
   const renderActions = (actions = []) => {
     if (actions.length === 0) {
       return (
@@ -16,34 +19,7 @@ function CallRecordTable() {
     }
   };
   return (
-    <div className="Table-container">
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          margin: "0px",
-          height: "70px",
-          //   padding: 0,
-        }}
-      >
-        <div>
-          <h3>Call Records</h3>
-          <p style={{ color: "gray", fontSize: "12px" }}>
-            Overall{" "}
-            <span style={{ fontWeight: "bold" }}>{TABLE_DATA.length}</span>
-          </p>
-        </div>
-
-        <div className="Tabbar-container">
-          {TAB.map((ele) => (
-            <button className={`${true ? "active-tab" : ""}`}>
-              {ele.title}
-            </button>
-          ))}
-        </div>
-      </div>
-
+    <div className="">
       <div className="container">
         <div
           style={{
@@ -52,7 +28,6 @@ function CallRecordTable() {
             alignItems: "center",
             margin: "0px",
             height: "70px",
-            //   padding: 0,
           }}
         >
           <div>
@@ -146,6 +121,13 @@ function CallRecordTable() {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="paginationTab">
+        <Pagination
+          totalPages={totalPages}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+        />
       </div>
     </div>
   );
