@@ -106,15 +106,22 @@ function CallRecordTable() {
                       />
                     </div>
                     <div>
-                      <p>{item.name}</p>
-                      <span style={{ fontSize: "12px", color: "gray" }}>
+                      <p style={{ margin: 0 }}>{item.name}</p>
+                      <span
+                        style={{ fontSize: "12px", color: "gray", margin: 0 }}
+                      >
                         Student
                       </span>
                     </div>
                   </div>
                 </td>
                 <td>{item.agenda}</td>
-                <td>{item.date}</td>
+                <td>
+                  <p style={{ margin: 0 }}>{item.date}</p>
+                  <span style={{ fontSize: "12px", color: "gray" }}>
+                    Friday
+                  </span>
+                </td>
                 <td>11:00 AM</td>
                 <td>{renderActions(item.actions)}</td>
               </tr>

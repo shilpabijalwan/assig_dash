@@ -82,19 +82,30 @@ function SideBar() {
             </p>
 
             <div className="side-bar-menu-item-data">
-              {item.data.map((ele, index) => (
-                <div
-                  className={`side-bar-menu-item-data-item ${
-                    isActiveRoute(ele.path) ? "active" : ""
-                  }`}
-                  key={index}
-                  onClick={() => handleNavigation(ele.path)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <span>{ele.icon}</span>
-                  <span style={{ fontSize: "14px" }}>{ele.title}</span>
-                </div>
-              ))}
+              {item.data.map((ele, index) => {
+                const isActive = isActiveRoute(ele.path);
+                return (
+                  <div
+                    className={`side-bar-menu-item-data-item ${
+                      isActive ? "active" : ""
+                    }`}
+                    key={index}
+                    onClick={() => handleNavigation(ele.path)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <span>
+                      {/* React.cloneElement()
+This is a built-in React method that allows you to clone an existing element and override or add new props.
+It's used when you don’t want to re-render or recreate the icon component manually — just modify it. */}
+                      {React.cloneElement(ele.icon, {
+                        color: isActive ? "white" : "black",
+                        size: 20
+                      })}
+                    </span>
+                    <span style={{ fontSize: "14px" }}>{ele.title}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}
@@ -102,7 +113,6 @@ function SideBar() {
           onClick={handleLogout}
           className="side-bar-menu-item-data-item"
           style={{
-            // border: "1px solid blue",
             marginTop: 0,
             paddingTop: 0,
             display: "flex",
