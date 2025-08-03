@@ -96,7 +96,7 @@ function SideBar() {
                     <span>
                       {/* React.cloneElement()
 This is a built-in React method that allows you to clone an existing element and override or add new props.
-It's used when you don’t want to re-render or recreate the icon component manually — just modify it. */}
+It's used when you don't want to re-render or recreate the icon component manually — just modify it. */}
                       {React.cloneElement(ele.icon, {
                         color: isActive ? "white" : "black",
                         size: 20

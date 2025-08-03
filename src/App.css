@@ -338,3 +338,143 @@ btn:disabled {
   opacity: 0.4;
   cursor: default;
 }
+
+/* Mobile responsive styles for table */
+
+
+
+@media (max-width: 1024px) {
+  .Table-container {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 15px 10px;
+    margin-top: 5px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #c1c1c1 #f1f1f1; /* Firefox */
+  
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  .container::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  .container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+
+  .container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+
+  .Table {
+    padding: 15px 10px;
+    font-size: 12px;
+    min-width: 800px; 
+
+    /* border:1px solid blueviolet */
+  }
+
+  .Table th,
+  .Table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .Table th {
+    font-size: 14px;
+    padding: 8px 6px;
+  }
+
+
+  /* Mobile pagination */
+  .paginationTab {
+    justify-content: center;
+    padding: 15px 6px;
+  }
+
+  .paginationContainer {
+    padding: 8px 6px;
+    gap: 2px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page {
+    padding: 8px 12px;
+    font-size: 14px;
+    min-width: 40px;
+    text-align: center;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 16px;
+    min-width: 40px;
+  }
+}
+
+@media (max-width: 580px) {
+  .Table-container {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px 5px;
+    /* overflow-x: auto; */
+ 
+  }
+
+  .Table {
+    overflow-x: auto;
+    padding: 10px 5px;
+    /* border:1px solid blue; */
+    -webkit-overflow-scrolling: touch;
+        /* min-width: 700px; Slightly smaller but still maintains desktop structure */
+  }
+
+  .Table th,
+  .Table td {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+
+  .Table th {
+    font-size: 12px;
+    padding: 6px 4px;
+  }
+
+  /* Mobile pagination adjustments */
+  .paginationContainer {
+    padding: 6px 6px;
+    gap: 2px;
+    /* border:1px solid green */
+  }
+
+  .page {
+    padding: 6px 8px;
+    font-size: 12px;
+    min-width: 32px;
+  }
+
+  .btn {
+    padding: 6px 8px;
+    font-size: 14px;
+    min-width: 32px;
+  }
+
+  .dots {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+}

@@ -144,16 +144,16 @@ function CallRecordTable() {
   const tableRows = useMemo(() => {
     return data?.map((item) => (
       <tr key={`${item.name}-${item.date}-${item.agenda}`}>
-        <td>
+        <td data-label="Mentee">
           <MenteeInfo name={item.name} />
         </td>
-        <td>{item.agenda}</td>
-        <td>
+        <td data-label="Agenda">{item.agenda}</td>
+        <td data-label="Date">
           <p style={STYLES.name}>{item.date}</p>
           <span style={STYLES.subtitle}>Friday</span>
         </td>
-        <td>11:00 AM</td>
-        <td>{renderActions(item.actions)}</td>
+        <td data-label="Time">11:00 AM</td>
+        <td data-label="Action">{renderActions(item.actions)}</td>
       </tr>
     ));
   }, [data, renderActions]);
