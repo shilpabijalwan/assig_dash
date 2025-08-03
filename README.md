@@ -1,13 +1,127 @@
-# React + Vite
+# Dashboard Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based dashboard application with authentication, call record management, and various administrative features.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 19.1.0
+- **Routing**: React Router DOM 7.7.1
+- **Build Tool**: Vite 7.0.4
+- **Icons**: React Icons 5.5.0
+- **Styling**: CSS3 with modern design patterns
+- **Code Quality**: ESLint with React-specific rules
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# assig_dash
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd assignment
+   ```
+
+2. **Install dependencies**
+   ```bash
+   yarn install
+   ```
+
+3. **Start the development server**
+   ```bash
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the application
+
+## 🚀 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint for code quality
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── CallRecordTable.jsx
+│   ├── CustomInput.jsx
+│   ├── Pagination.jsx
+│   ├── PastCallRecord.jsx
+│   ├── SearchInput.jsx
+│   └── layout/         # Layout components
+│       ├── Layout.jsx
+│       ├── Layout.css
+│       ├── SideBar.jsx
+│       └── HorizontalBar.jsx
+├── pages/              # Page components
+│   ├── dashboard.jsx
+│   ├── call-record.jsx
+│   ├── earning.jsx
+│   ├── settings.jsx
+│   ├── help-support.jsx
+│   ├── login-page.jsx
+│   └── pages.css
+├── Routers/            # Routing configuration
+│   └── page-router.jsx
+├── Hooks/              # Custom React hooks
+│   └── useTableData.jsx
+├── utils/              # Utility functions and constants
+│   └── constants.js
+├── assets/             # Static assets
+│   └── react.svg
+├── App.jsx             # Main App component
+├── App.css             # App styles
+├── main.jsx            # Application entry point
+└── index.css           # Global styles
+```
+
+## 🔐 Authentication
+
+The application uses localStorage-based authentication:
+- Login credentials are stored in browser localStorage
+- Protected routes automatically redirect to login if not authenticated
+- Authenticated users are redirected to dashboard from login page
+
+## 📊 Call Record Management
+
+The call record system includes:
+- **Upcoming Calls**: View and manage scheduled calls
+- **Past Calls**: Historical call records
+- **Call Actions**: Schedule, cancel, and manage calls
+- **Search & Filter**: Find specific call records
+- **Pagination**: Navigate through large datasets
+
+## 🎨 UI Components
+
+- **Sidebar Navigation**: Collapsible sidebar with menu items
+- **Horizontal Bar**: Top navigation bar
+- **Tab Navigation**: Switch between different views
+- **Data Tables**: Responsive tables with sorting and filtering
+- **Search Input**: Real-time search functionality
+- **Pagination**: Page navigation for large datasets
+
+## 🔧 Configuration
+
+### Environment Setup
+The application is configured to run on:
+- **Development**: `http://localhost:5173`
+- **Production**: Configured via Vite build process
+
+### Data Management
+- Call records are stored in `src/utils/constants.js`
+- Date format: "1 August", "2 September" (readable format)
+- Actions include: "call", "calendar", "cancel"
+
+## 🚀 Deployment
+
+1. **Build the application**
+   ```bash
+   npm run build
+   ```
+
+2. **Preview the build**
+   ```bash
+   npm run preview
+   ```

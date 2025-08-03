@@ -1,3 +1,9 @@
+body{
+  /* border:1px solid blue; */
+  margin: 0;
+}
+
+
 .main-container {
   position: relative;
   min-height: 100vh;
@@ -252,11 +258,14 @@ It’s useful for highlighting the whole input area when a user clicks inside it
 }
 
 .Table th {
-  color: #4a4848;
-  font-weight: bold;
+  color: #737373;
+  font-weight: semi-bold;
   font-size: 16px;
   padding: 16px 16px;
   border-bottom: 1px solid #d5d7d9;
+}
+.Table tr:last-child td {
+  border-bottom: none;
 }
 
 /* pagination */

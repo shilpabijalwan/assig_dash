@@ -77,7 +77,7 @@ function CallRecordTable() {
           <tbody>
             {data?.map((item, index) => (
               <tr key={index}>
-                <td style={{ fontWeight: "bold" }}>
+                <td>
                   <div
                     style={{
                       display: "flex",
@@ -106,16 +106,16 @@ function CallRecordTable() {
                       />
                     </div>
                     <div>
-                      <div>{item.name}</div>
+                      <p>{item.name}</p>
                       <span style={{ fontSize: "12px", color: "gray" }}>
-                        student
+                        Student
                       </span>
                     </div>
                   </div>
                 </td>
                 <td>{item.agenda}</td>
                 <td>{item.date}</td>
-                <td>11:00 AM</td> {/* You can customize this as needed */}
+                <td>11:00 AM</td>
                 <td>{renderActions(item.actions)}</td>
               </tr>
             ))}

@@ -20,8 +20,6 @@ function HorizontalBar() {
       <div
         style={{
           display: "flex",
-          // border: "1px solid blue",
-          // marginRight: "30px",
           width: "200px",
           justifyContent: "space-around",
           alignItems: "center",

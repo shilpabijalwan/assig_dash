@@ -6,7 +6,6 @@ import {
   IoHomeOutline,
   IoLogOutOutline,
   IoSettingsOutline,
-  IoThermometerOutline,
 } from "react-icons/io5";
 import { TiDocumentText } from "react-icons/ti";
 
@@ -15,12 +14,14 @@ function SideBar() {
   const location = useLocation();
 
   const handleNavigation = (path) => {
-    if (path === "/log-out") {
-      localStorage.removeItem("loginDetail");
+    navigate(path);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("loginDetail");
+    setTimeout(() => {
       navigate("/login");
-    } else {
-      navigate(path);
-    }
+    }, 1000);
   };
 
   const isActiveRoute = (path) => {
@@ -61,11 +62,6 @@ function SideBar() {
           icon: <IoHelpCircleOutline color="black" size={20} />,
           path: "/help-support",
         },
-        {
-          title: "Log Out",
-          icon: <IoLogOutOutline color="black" />,
-          path: "/log-out",
-        },
       ],
     },
   ];
@@ -102,6 +98,26 @@ function SideBar() {
             </div>
           </div>
         ))}
+        <button
+          onClick={handleLogout}
+          className="side-bar-menu-item-data-item"
+          style={{
+            // border: "1px solid blue",
+            marginTop: 0,
+            paddingTop: 0,
+            display: "flex",
+            justifyContent: "start",
+            color: "gray",
+            outline: "none",
+            border: "none",
+            gap: "none",
+            fontSize: "14px",
+            background: "none",
+            cursor: "pointer",
+          }}
+        >
+          <IoLogOutOutline color="black" size={16} /> Logout
+        </button>
       </div>
     </div>
   );
