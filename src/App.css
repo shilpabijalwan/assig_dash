@@ -247,6 +247,7 @@ It’s useful for highlighting the whole input area when a user clicks inside it
   margin-top: 10px;
   padding: 30px 20px;
   border-radius: 15px;
+  table-layout: fixed;
 }
 .Table th,
 .Table td {
@@ -267,7 +268,22 @@ It’s useful for highlighting the whole input area when a user clicks inside it
 .Table tr:last-child td {
   border-bottom: none;
 }
+/*  */
+.Table th:nth-child(3), .Table td:nth-child(3),  /* Date */
+.Table th:nth-child(4), .Table td:nth-child(4),  /* Time */
+.Table th:nth-child(5), .Table td:nth-child(5)   /* Action */
+{
+  width: 150px;
+}
 
+
+/* Mentee and Agenda columns - equal remaining space */
+.Table th:nth-child(1),
+.Table td:nth-child(1),
+.Table th:nth-child(2),
+.Table td:nth-child(2) {
+  width: calc((100% - 450px) / 2);
+}
 /* pagination */
 .paginationTab {
   display: flex;

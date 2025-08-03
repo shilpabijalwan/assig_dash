@@ -3,6 +3,10 @@ import useTableData from "../Hooks/useTableData";
 import { TABLE_DATA } from "../utils/constants";
 import SearchInput from "./SearchInput";
 import Pagination from "./Pagination";
+import { MdCall } from "react-icons/md";
+import { CiCalendar } from "react-icons/ci";
+import { BsX } from "react-icons/bs";
+import { IoCallOutline } from "react-icons/io5";
 
 function CallRecordTable() {
   const [perPage, setPerPage] = useState(10);
@@ -16,7 +20,40 @@ function CallRecordTable() {
       return (
         <span style={{ color: "#999", fontSize: "14px" }}>Yet to start</span>
       );
-    }
+    } 
+  
+    return (
+      <div style={{
+         display:"flex",
+         gap:"10px",
+         justifyContent:"space-around",
+        //  border:"1px solid pink",
+        //  width:"100%"
+         
+         
+      }}>
+        <IoCallOutline size={22} color="green" style={{borderRadius:"50%",
+        padding:"6px",
+        background:"#f0f0f0dc"
+
+
+        }}/>
+        <CiCalendar size={22} color="blue"  style={{borderRadius:"50%",
+        padding:"6px",
+        background:"#f0f0f0dc"
+
+
+        }}/>
+        <BsX  size={22}  color="red"  style={{borderRadius:"50%",
+        padding:"6px",
+        background:"#f0f0f0dc"
+
+
+        }}/>
+      </div>
+    )
+  
+
   };
   return (
     <div className="">

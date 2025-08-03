@@ -4,7 +4,7 @@ import PastCallRecord from "../components/PastCallRecord";
 export const TABLE_DATA = [
   {
     name: "Chitra Nayak",
-    agenda: "Legal Review",
+    agenda: "Taxation and budgeting plan",
     date: "1 August",
     actions: ["calendar", "cancel"],
   },
