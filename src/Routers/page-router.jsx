@@ -7,6 +7,8 @@ import CallRecord from "../pages/call-record";
 import Earning from "../pages/earning";
 import Settings from "../pages/settings";
 import HelpSupport from "../pages/help-support";
+import Profile from "../pages/profile";
+import NotFound from "../pages/404";
 
 // Route protection wrapper
 function ProtectedRoute({ children, requireAuth = true }) {
@@ -67,12 +69,15 @@ function PageRouter() {
         {/* Help & Support route */}
         <Route path="help-support" element={<HelpSupport />} />
 
+        {/* Profile route */}
+        <Route path="profile" element={<Profile />} />
+
         {/* Default redirect to dashboard */}
         <Route index element={<Navigate to="/dashboard" replace />} />
       </Route>
 
-      {/* Catch all */}
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      {/* Catch all - 404 page */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
