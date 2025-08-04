@@ -90,16 +90,14 @@ The call record system includes:
 - **Upcoming Calls**: View and manage scheduled calls
 - **Past Calls**: Historical call records
 - **Call Actions**: Schedule, cancel, and manage calls
-- **Search & Filter**: Find specific call records
 - **Pagination**: Navigate through large datasets
 
 ## 🎨 UI Components
 
-- **Sidebar Navigation**: Collapsible sidebar with menu items
+- **Sidebar Navigation**:  sidebar with menu items
 - **Horizontal Bar**: Top navigation bar
 - **Tab Navigation**: Switch between different views
-- **Data Tables**: Responsive tables with sorting and filtering
-- **Search Input**: Real-time search functionality
+- **Data Tables**: Responsive tables
 - **Pagination**: Page navigation for large datasets
 
 ## 🔧 Configuration
@@ -111,7 +109,7 @@ The application is configured to run on:
 
 ### Data Management
 - Call records are stored in `src/utils/constants.js`
-- Date format: "1 August", "2 September" (readable format)
+
 - Actions include: "call", "calendar", "cancel"
 
 ## 🚀 Deployment
